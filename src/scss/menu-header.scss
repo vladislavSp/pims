@@ -1,0 +1,176 @@
+.header__menu[header-menu="close"] {
+  transform-origin: right top;
+  transform: scale(0);
+  clip-path: circle(0% at 50rem 0rem);
+}
+
+.header__menu[header-menu="open"] {
+  transform-origin: right top;
+  // transform: scale(1);
+  clip-path: circle(100% at 50rem 0rem);
+}
+
+.header__menu-btn--center {
+  position:relative;
+
+  &::after, &::before {
+    content:'';
+    position:absolute;
+    display:block;
+    width:1.5rem;
+    height:0.125rem;
+    background-color:#10202F;
+    transition-property: transform, transform;
+    transition-duration: 700ms, 700ms;
+  }
+  &::before {
+    transform: translateY(8px);
+  }
+  &::after {
+    transform: translateY(-8px);
+  }
+}
+
+.header__menu-btn {
+  transition: background-color 0.3s ease;
+}
+
+.header__menu-btn[state="open"] {
+  background-color: rgba(16, 32, 47, 0.3);
+
+  & .header__menu-btn--center {
+    background-color: transparent;
+
+    &::before {
+      animation: 500ms ease changeStateTop;
+      animation-fill-mode: forwards;
+    }
+
+    &::after {
+      animation: 500ms ease changeStateBottom;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+.header__menu-btn[state="close"] {
+  & .header__menu-btn--center {
+
+    &::before {
+      animation: 500ms ease changeStateTopBack;
+      animation-fill-mode: forwards;
+    }
+
+    &::after {
+      animation: 500ms ease changeStateBottomBack;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+.nav__selector {
+  transition: color 0.3s ease;
+}
+
+.nav__selector[state="disable"] {
+  color: #CFD2D5;
+}
+
+@keyframes changeStateBottomBack {
+  from {
+    transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    @media (min-width: 768px) {
+      transform: translateY(-8px);
+    }
+    @media (max-width: 768px) {
+      transform: translateY(-6px);
+    }
+  }
+}
+
+@keyframes changeStateTopBack {
+  from {
+    transform: translateY(0) rotate(45deg);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    @media (min-width: 768px) {
+      transform: translateY(8px);
+    }
+    @media (max-width: 768px) {
+      transform: translateY(6px);
+    }
+  }
+}
+
+@keyframes changeStateBottom {
+  from {
+    @media (min-width: 768px) {
+      transform: translateY(-8px);
+    }
+    @media (max-width: 768px) {
+      transform: translateY(-6px);
+    }
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+}
+
+@keyframes changeStateTop {
+  from {
+    @media (min-width: 768px) {
+      transform: translateY(8px);
+    }
+    @media (max-width: 768px) {
+      transform: translateY(6px);
+    }
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0) rotate(45deg);
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .header__menu[header-menu="close"] {
+    clip-path: circle(0% at 40rem 0rem);
+  }
+  .header__menu[header-menu="open"] {
+    clip-path: circle(100% at 40rem 0rem);
+  }
+}
+
+@media (max-width: 767px) {
+  .header__menu-btn--center {
+    &::after, &::before {
+      width: 1rem;
+      height: 0.09375rem;
+    }
+    &::before {
+      transform: translateY(6px);
+    }
+    &::after {
+      transform: translateY(-6px);
+    }
+  }
+
+  .header__menu[header-menu="close"] {
+    clip-path: circle(0% at 25rem 0rem);
+  }
+  .header__menu[header-menu="open"] {
+    clip-path: circle(100% at 25rem 0rem);
+  }
+}

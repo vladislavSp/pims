@@ -1,0 +1,39 @@
+.menu__description[state="disable"] {
+  display: none;
+}
+
+.menu__text, .menu__pin {
+  transition: opacity 0.5s ease;
+}
+
+@media(min-width: 768px) {
+  .menu__item[state="enable"] {
+    & .menu__text, .menu__pin {
+      opacity: 1;
+    }
+  }
+}
+
+.menu__item[state="enable"] .menu__pin,
+.menu__item[state="enable"] .menu__text {
+  display: flex;
+}
+
+.menu__desc-item[state="enable"] {
+  color:#10202F;
+  border-bottom:2px solid #10202F;
+}
+
+.menu__desc-block--active {
+  position: relative;
+  z-index: 10;
+}
+
+// @keyframes forwardIndicator {
+//   from {
+//     height: 0%;
+//   }
+//   to {
+//     height: 100%;
+//   }
+// }

@@ -1,0 +1,7 @@
+.insta__slide:nth-child(even) {
+  align-self:flex-start
+}
+
+.insta__slide:nth-child(odd) {
+  align-self:flex-end
+}
