@@ -2,13 +2,13 @@
   margin-right: 0;
 }
 
+.nav__item:last-child {
+  margin-bottom: 0;
+}
+
 @media (min-width: 1920px) {
   .about__container {
     width: 30rem;
-  }
-
-  .footer {
-    min-height: 35rem;
   }
 }
 

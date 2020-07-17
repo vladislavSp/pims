@@ -1,8 +1,6 @@
-.slider__btn--disabled svg path {
-  opacity: 0.3;
+.slider__btn--disabled {
+  background-color: #E5E5E5;
 }
-
-// $unit: 1rem;
 
 .slider__pag--active {
   position: relative;
