@@ -29,6 +29,7 @@ function initInstaSlider() {
     freeModeMomentumVelocityRatio: 0.8,
     loop: true,
     freeMode: true,
+    loopedSlides: 100,
 
     autoplay: {
       delay: 0,
@@ -44,6 +45,7 @@ function initMainMenuSlider() {
     slidesPerView: 'auto',
     direction: 'horizontal',
     speed: 0,
+    allowTouchMove: false,
 
     navigation: {
       disabledClass: 'slider__btn--disabled',
@@ -60,6 +62,12 @@ function initDescMenuSlider() {
     slidesPerView: 'auto',
     direction: 'horizontal',
     speed: 0,
+    allowTouchMove: false,
+    // effect: 'fade',
+
+    // fadeEffect: {
+    //   crossFade: true
+    // },
 
     navigation: {
       disabledClass: 'slider__btn--disabled',

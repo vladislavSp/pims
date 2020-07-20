@@ -6,13 +6,12 @@
   margin-bottom: 0;
 }
 
-@media (min-width: 1920px) {
-  .about__container {
-    width: 30rem;
-  }
-}
 
 @media (max-width:1600px) and (min-width: 991px) {
+  .wrapper {
+    width: 100%;
+  }
+
   .desc {
     min-height: 55rem;
   }
@@ -45,10 +44,10 @@
 }
 
 @media (max-width: 1500px) and (min-width: 991px) {
-  .about__text {
-    margin-bottom: 1.5rem;
+  .menu__container {
+    width: 50rem;
+    height: 50rem;
   }
-
   .desc__one-list {
     margin-right: auto;
   }
@@ -65,19 +64,6 @@
     margin-bottom: 4.75rem;
   }
 
-  // ABOUT
-  .about__title {
-    font-size: 1.75rem;
-  }
-
-  .about__container {
-    width: 300px;
-  }
-
-  .about__play-btn {
-    width: 10rem;
-    height: 10rem;
-  }
 
   .slider__controls {
     margin-top: 1rem;
@@ -97,66 +83,73 @@
   }
 
   // MENU
-  .menu__desc-block {
-    width: 20.5rem;
-    padding: 2rem 2.5rem;
+  .menu__container {
+    width: 46rem;
+    height: 46rem;
+  }
+  .menu__desc-title {
+    font-size: 2rem;
+    margin-top: 4.25rem;
+    margin-bottom: 2rem;
+  }
+  .menu__description {
+    max-width: 21rem;
+    font-size: 1.25rem;
+  }
+  .menu__desc-btn {
+    margin-top: 4.75rem;
+  }
+  .desc__pims {
+    width: 10rem;
   }
 }
 
 @media (max-width: 1200px) and (min-width: 991px) {
-  .about__title {
-    font-size: 1.5rem;
+  .main {
+    min-height: 55rem;
+  }
+  .main__title {
+    font-size: 4.25rem;
   }
 
-  .about__container {
-    width: 260px;
-  }
-
-  .about__play-btn {
-    width: 8rem;
-    height: 8rem;
-  }
-
-  .about__play-btn {
-    right: -32%;
-  }
-
-  .about__text-btn {
-    left: 16px;
-    font-size: 0.875rem;
-    line-height: 1.2;
-  }
 
   //DESC
   .desc__title {
     font-size: 4.25rem;
   }
-
   .desc {
     min-height: auto;
     padding-top: 4rem;
   }
-
   .desc__one-list {
     display: none;
   }
-
-  // MENU
-  .menu__description {
-    margin-bottom: 2rem;
+  .desc__pims {
+    width: 8rem;
   }
 
+
+  // MENU
+  .menu__container {
+    width: 40rem;
+    height: 40rem;
+  }
+  .menu__description {
+    font-size: 1rem;
+  }
   .menu__item {
     width: 20rem;
     padding-left: 6.75rem;
   }
-
   .menu__pin {
     left: 1.75rem;
   }
-
-  .menu__btns {
-    margin-left: 6.75rem;
+  .menu__desc-title {
+    font-size: 1.75rem;
+    margin-top: 3.25rem;
+  }
+  .menu__desc-btn {
+    margin-top: 3.75rem;
   }
 
   // INSTA
@@ -166,19 +159,20 @@
   .insta__call {
     margin-top: 3rem;
   }
-
-  //CARDS
-  .cards {
-    padding-top: 3rem;
+  .insta__link {
+    margin-bottom: 3.75rem;
   }
 
-  // FOOTER
-  .footer__menu {
-    padding-top: 1.25rem;
+  //CLOTHES
+  .clothes {
+    min-height: 35rem;
   }
+}
 
-  .footer__coop {
-    margin-top: 1rem;
+@media (max-width: 1100px) and (min-width: 991px) {
+  .menu__container {
+    width: 34rem;
+    height: 34rem;
   }
 }
 
@@ -218,5 +212,11 @@
 
   .menu__btn {
     pointer-events: all;
+  }
+}
+
+@media (max-width: 479px) {
+  .menu__container {
+    height: calc(100vw - 4rem);
   }
 }
