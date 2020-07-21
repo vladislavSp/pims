@@ -18,6 +18,8 @@ initInstaSlider();
 initMainMenuSlider();
 initDescMenuSlider();
 
+
+
 // FUNCTIONS for sliders
 function initInstaSlider() {
   let instaSlider = new Swiper(instaBlock, {
@@ -43,9 +45,12 @@ function initMainMenuSlider() {
     wrapperClass: 'menu__wrapper',
     slideClass: 'menu__slide',
     slidesPerView: 'auto',
-    direction: 'horizontal',
-    speed: 0,
-    allowTouchMove: false,
+    speed: 400,
+    effect: 'fade',
+
+    fadeEffect: {
+      crossFade: true,
+    },
 
     navigation: {
       disabledClass: 'slider__btn--disabled',
@@ -53,9 +58,7 @@ function initMainMenuSlider() {
       prevEl: '.menu__btn[menu-btn="prev"]',
     },
   });
-}
 
-function initDescMenuSlider() {
   let mainMenuSlider = new Swiper(menuDescCont, {
     wrapperClass: 'menu__desc-wrap',
     slideClass: 'menu__desc-item',
@@ -63,11 +66,6 @@ function initDescMenuSlider() {
     direction: 'horizontal',
     speed: 0,
     allowTouchMove: false,
-    // effect: 'fade',
-
-    // fadeEffect: {
-    //   crossFade: true
-    // },
 
     navigation: {
       disabledClass: 'slider__btn--disabled',
@@ -75,4 +73,10 @@ function initDescMenuSlider() {
       prevEl: '.menu__btn[menu-btn="prev"]',
     },
   });
+
+  mainMenuSlider.on('slideChange', () => {
+    console.log(mainMenuSlider.activeIndex);
+    // mainMenuSlider.
+  });
 }
+

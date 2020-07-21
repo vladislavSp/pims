@@ -11,7 +11,7 @@ function clickCirclesHandler() {
   timer = setTimeout(() => {
     this.querySelector('.desc__item').style.opacity = 0;
     this.addEventListener('click', clickCirclesHandler);
-  }, 5000);
+  }, 3000);
 }
 
 

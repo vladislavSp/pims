@@ -30,12 +30,13 @@
 }
 
 // ADAPTIVE
-@media (max-width: 991px) {
+@media (max-width: 991px) and (min-width: 480px) {
   .header__menu[header-menu="close"] {
-    clip-path: circle(0% at 36rem 0rem);
+    clip-path: circle(0% at 35rem 0rem);
   }
+
   .header__menu[header-menu="open"] {
-    clip-path: circle(100% at 36rem 0rem);
+    clip-path: circle(100% at 35rem 0rem);
   }
 }
 
@@ -44,5 +45,15 @@
     & .header__menu-btn--center:last-child {
       transform: translateY(-4px) rotate(-45deg);
     }
+  }
+}
+
+@media (max-width: 479px) {
+  .header__menu[header-menu="close"] {
+    clip-path: circle(0% at 30rem 0rem);
+  }
+
+  .header__menu[header-menu="open"] {
+    clip-path: circle(100% at 30rem 0rem);
   }
 }

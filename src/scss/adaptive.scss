@@ -6,12 +6,13 @@
   margin-bottom: 0;
 }
 
-
-@media (max-width:1600px) and (min-width: 991px) {
+@media (max-width: 1700px) {
   .wrapper {
     width: 100%;
   }
+}
 
+@media (max-width:1600px) and (min-width: 991px) {
   .desc {
     min-height: 55rem;
   }
@@ -89,7 +90,6 @@
   }
   .menu__desc-title {
     font-size: 2rem;
-    margin-top: 4.25rem;
     margin-bottom: 2rem;
   }
   .menu__description {
@@ -101,6 +101,8 @@
   }
   .desc__pims {
     width: 10rem;
+    height: 10rem;
+    margin-bottom: 4.25rem;
   }
 }
 
@@ -126,6 +128,8 @@
   }
   .desc__pims {
     width: 8rem;
+    height: 8rem;
+    margin-bottom: 3.25rem;
   }
 
 
@@ -146,7 +150,6 @@
   }
   .menu__desc-title {
     font-size: 1.75rem;
-    margin-top: 3.25rem;
   }
   .menu__desc-btn {
     margin-top: 3.75rem;
@@ -166,6 +169,7 @@
   //CLOTHES
   .clothes {
     min-height: 35rem;
+    background-size: 440px;
   }
 }
 
