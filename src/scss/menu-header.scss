@@ -30,20 +30,19 @@
 }
 
 // ADAPTIVE
-@media (max-width: 991px) and (min-width: 768px) {
+@media (max-width: 991px) {
   .header__menu[header-menu="close"] {
-    clip-path: circle(0% at 40rem 0rem);
+    clip-path: circle(0% at 36rem 0rem);
   }
   .header__menu[header-menu="open"] {
-    clip-path: circle(100% at 40rem 0rem);
+    clip-path: circle(100% at 36rem 0rem);
   }
 }
 
 @media (max-width: 767px) {
-  .header__menu[header-menu="close"] {
-    clip-path: circle(0% at 25rem 0rem);
-  }
-  .header__menu[header-menu="open"] {
-    clip-path: circle(100% at 25rem 0rem);
+  .header__menu-btn[state="open"] {
+    & .header__menu-btn--center:last-child {
+      transform: translateY(-4px) rotate(-45deg);
+    }
   }
 }
