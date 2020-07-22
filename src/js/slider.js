@@ -16,8 +16,6 @@ let menu = document.querySelector('.menu'),
 // INIT SLIDERS
 initInstaSlider();
 initMainMenuSlider();
-initDescMenuSlider();
-
 
 
 // FUNCTIONS for sliders
@@ -59,13 +57,18 @@ function initMainMenuSlider() {
     },
   });
 
-  let mainMenuSlider = new Swiper(menuDescCont, {
+  let mainDescSlider = new Swiper(menuDescCont, {
     wrapperClass: 'menu__desc-wrap',
     slideClass: 'menu__desc-item',
     slidesPerView: 'auto',
     direction: 'horizontal',
-    speed: 0,
+    speed: 400,
     allowTouchMove: false,
+    effect: 'fade',
+
+    fadeEffect: {
+      crossFade: true,
+    },
 
     navigation: {
       disabledClass: 'slider__btn--disabled',
@@ -74,9 +77,10 @@ function initMainMenuSlider() {
     },
   });
 
+  // подвязка слайдера описания на изменения слайдера картинок
   mainMenuSlider.on('slideChange', () => {
     console.log(mainMenuSlider.activeIndex);
-    // mainMenuSlider.
+    mainDescSlider.slideTo(mainMenuSlider.activeIndex);
   });
 }
 
