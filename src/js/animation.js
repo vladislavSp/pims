@@ -7,7 +7,10 @@ function animationText () {
     gsap.from(el, { duration: 1, y: 90 });
   });
 
-  gsap.from(headerDesc, { duration: 1, y: 40 });
+  gsap.from(headerDesc, { duration: 1, y: 120 });
 }
 
-animationText();
+if (headerTitle || headerDesc) {
+  animationText();
+}
+

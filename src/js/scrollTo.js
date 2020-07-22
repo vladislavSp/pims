@@ -3,7 +3,7 @@ let links = Array.from(document.querySelectorAll('*[link]')),
     headerMenuBtn = document.querySelector('[menu-btn="header"]'),
     headerMenu = document.querySelector('[header-menu]');
 
-links.map(el => el.addEventListener('click', linksHandler));
+if (links.length) links.map(el => el.addEventListener('click', linksHandler));
 
 function linksHandler() {
   let identificator = this.getAttribute('link');

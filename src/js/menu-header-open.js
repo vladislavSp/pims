@@ -1,7 +1,7 @@
 let headerMenuBtn = document.querySelector('[menu-btn="header"]'),
     headerMenu = document.querySelector('[header-menu]');
 
-headerMenuBtn.addEventListener('click', openHeaderMenu);
+if (headerMenuBtn) headerMenuBtn.addEventListener('click', openHeaderMenu);
 
 function openHeaderMenu() {
   let state = this.getAttribute('state');
