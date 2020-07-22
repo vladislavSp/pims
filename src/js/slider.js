@@ -69,18 +69,11 @@ function initMainMenuSlider() {
     fadeEffect: {
       crossFade: true,
     },
-
-    navigation: {
-      disabledClass: 'slider__btn--disabled',
-      nextEl: '.menu__btn[menu-btn="next"]',
-      prevEl: '.menu__btn[menu-btn="prev"]',
-    },
   });
 
   // подвязка слайдера описания на изменения слайдера картинок
   mainMenuSlider.on('slideChange', () => {
-    console.log(mainMenuSlider.activeIndex);
-    mainDescSlider.slideTo(mainMenuSlider.activeIndex);
+    mainDescSlider.slideTo(mainMenuSlider.realIndex);
   });
 }
 

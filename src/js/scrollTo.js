@@ -18,7 +18,7 @@ function linksHandler() {
 }
 
 function tweenMaxFunction (obj) {
-  gsap.to($("body,html"), 0.8, {
+  gsap.to(document.querySelector('html'), 0.8, {
     ease: Power2.easeOut,
     scrollTop: obj.getBoundingClientRect().top + pageYOffset
   });
