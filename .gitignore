@@ -1,4 +1,2 @@
+dist/
 /node_modules
-/dist
-dist/bundle-main.js.map
-dist/bundle-main.js

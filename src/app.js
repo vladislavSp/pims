@@ -6,7 +6,6 @@ import './scss/adaptive.scss';
 import './scss/menu-block.scss';
 import './scss/slider.scss';
 import './scss/menu-header.scss';
-import './scss/about.scss';
 
 //hover
 import './scss/hover.scss';

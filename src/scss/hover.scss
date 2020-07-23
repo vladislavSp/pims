@@ -6,3 +6,8 @@
 .desc__item {
   pointer-events: none;
 }
+
+.desc__image {
+  pointer-events: none !important;
+  user-select: none;
+}
