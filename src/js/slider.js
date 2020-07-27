@@ -73,6 +73,4 @@ if (instaBlock) {
   
   initInstaSlider();
 }
-// FUNCTIONS for sliders
-
 
