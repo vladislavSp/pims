@@ -11,3 +11,29 @@
   pointer-events: none !important;
   user-select: none;
 }
+
+@keyframes animationPin {
+  0% {
+    background-color: hsla(0, 0%, 100%, 0.2);
+  }
+  50% {
+    background-color: hsla(0, 0%, 100%, 0.65);
+  }
+  100% {
+    background-color: hsla(0, 0%, 100%, 0.2);
+  }
+}
+
+.desc__round {
+  animation: animationPin 1.5s ease-in-out infinite; 
+}
+
+.desc__round[data-round="first"] {
+  animation-delay: 0.5s;
+}
+.desc__round[data-round="second"] {
+  animation-delay: 1.5s;
+}
+.desc__round[data-round="third"] {
+  animation-delay: 1s;
+}
