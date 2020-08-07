@@ -25,7 +25,7 @@
 }
 
 .desc__round {
-  animation: animationPin 1.5s ease-in-out infinite; 
+  animation: animationPin 2s ease-in-out infinite; 
 }
 
 .desc__round[data-round="first"] {
@@ -63,6 +63,13 @@
     }
   }
 
+  .menu__btn {
+    transition: opacity 0.3s ease;
+    &:hover:not(.slider__btn--disabled) {
+      opacity: 0.8;
+    }
+  }
+
   .insta__svg svg path {
     transition: fill 0.3s ease;
   }
@@ -92,4 +99,12 @@
       color: white;
     }
   }
+
+
+  // HOVER ON IMAGE
+  // .menu__slide:hover {
+  .menu__image:hover {
+    transform: scale(1.1);
+  }
+  // }
 }

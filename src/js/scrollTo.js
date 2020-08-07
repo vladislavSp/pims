@@ -3,12 +3,12 @@ let links = Array.from(document.querySelectorAll('*[link]')),
     headerMenuBtn = document.querySelector('[menu-btn="header"]'),
     headerMenu = document.querySelector('[header-menu]');
 
-if (links.length) links.map(el => el.addEventListener('click', linksHandler));
+if (links.length) links.forEach(el => el.addEventListener('click', linksHandler));
 
 function linksHandler() {
   let identificator = this.getAttribute('link');
 
-  blocks.map(el => {
+  blocks.forEach(el => {
     if (el.getAttribute('scroll-block') === `${identificator}`) {
       headerMenu.setAttribute('header-menu', 'close');
       headerMenuBtn.setAttribute('state', 'close');
