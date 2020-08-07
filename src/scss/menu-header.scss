@@ -18,13 +18,14 @@
 }
 
 .header__menu-btn[state="open"] {
-  & .header__menu-btn--center:first-child {
+  & .header__menu-btn--center {
     background-color: #10202F;
+  }
+  & .header__menu-btn--center:first-child {
     transform: translateY(7px) rotate(45deg);
   }
 
   & .header__menu-btn--center:last-child {
-    background-color: #10202F;
     transform: translateY(-7px) rotate(-45deg);
   }
 }
