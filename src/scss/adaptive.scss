@@ -1,9 +1,22 @@
+
+.nav__item:last-child {
+  margin-bottom: 0;
+}
+
 .footer__link:last-child {
   margin-right: 0;
 }
 
-.nav__item:last-child {
-  margin-bottom: 0;
+@media (min-width: 992px) {
+  .main {
+    box-sizing: content-box;
+  }
+}
+
+@media (min-width: 2056px) {
+  .main {
+    background-position: 50% 75%;
+  }
 }
 
 @media (max-width: 1700px) {
@@ -55,6 +68,9 @@
 }
 
 @media (max-width: 1440px) and (min-width: 991px) {
+  .main {
+    min-height: 60rem;
+  }
   //HEADER
   .header__menu {
     width: 45rem;
