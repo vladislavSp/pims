@@ -19,3 +19,4 @@ import './js/menu-header-open.js';
 import './js/slider.js';
 import './js/scrollTo.js';
 import './js/desc-round-info.js';
+import './js/popup.js';

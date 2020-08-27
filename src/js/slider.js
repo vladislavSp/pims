@@ -1,12 +1,11 @@
-// INSTA
-let instaBlock = document.querySelector('.insta__container');
-
-// MENU-MAIN
-let menu = document.querySelector('.menu');
+// Blocks
+const menu = document.querySelector('.menu');
+const instaBlock = document.querySelector('.insta__container');
+const aroundBlock = document.querySelector('.around__cont');
 
 if (menu) {
   let mainMenuCont = menu.querySelector('.menu__container'),
-  menuDescCont = document.querySelector('.menu__desc-cont');
+  menuDescCont = menu.querySelector('.menu__desc-cont');
 
   function initMainMenuSlider() {
     let mainMenuSlider = new Swiper(mainMenuCont, {
@@ -50,7 +49,6 @@ if (menu) {
   initMainMenuSlider();
 }
 
-// INIT SLIDERS
 if (instaBlock) {
   function initInstaSlider() {
     let instaSlider = new Swiper(instaBlock, {
@@ -74,3 +72,22 @@ if (instaBlock) {
   initInstaSlider();
 }
 
+if (aroundBlock) {
+  let aroundSlider = new Swiper(aroundBlock, {
+    wrapperClass: 'around__wrap',
+    slideClass: 'around__slide',
+    speed: 400,
+
+    // fadeEffect: {
+    //   crossFade: true,
+    // },
+
+    pagination: {
+      el: '.around__paginations',
+      type: 'bullets',
+      clickable: true,
+      bulletClass: 'around__pag',
+      bulletActiveClass: 'around__pag--active',
+    },
+  });
+}

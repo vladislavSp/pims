@@ -7,16 +7,20 @@
   margin-right: 0;
 }
 
-@media (min-width: 992px) {
-  .main {
-    box-sizing: content-box;
+.popup[data-state="enable"] {
+  overflow-y: scroll;
+}
+
+@media screen {
+  .popup {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
   }
 }
 
-@media (min-width: 2056px) {
+@media (min-width: 992px) {
   .main {
-    background-position: 50% 75%;
-    min-height: 80rem;
+    box-sizing: content-box;
   }
 }
 

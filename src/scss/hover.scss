@@ -49,6 +49,20 @@
     }
   }
 
+  .nav__social-link {
+    & svg {
+      & path, circle {
+        transition: fill 0.3s ease;
+      }
+    } 
+
+    &:hover svg {
+      & path, circle {
+        fill: #F4A300;
+      }
+    }
+  }
+
   .nav__link, .footer__link {
     transition: color 0.3s ease;
     &:hover {
@@ -100,11 +114,31 @@
     }
   }
 
+  
+
+  .desc__two-item {
+    & svg path {
+      transition: fill 0.3s ease;
+    }
+
+    & .desc__svg-wrap {
+      transition: background-color 0.2s ease, transform 0.3s ease;
+    }
+
+    &:hover {
+      & .desc__svg-wrap {
+        transform: scale(1.1);
+        background-color: white;
+      }
+
+      & svg path {
+        fill: #F4A300;
+      }
+    }
+  }
 
   // HOVER ON IMAGE
-  // .menu__slide:hover {
   .menu__image:hover {
     transform: scale(1.1);
   }
-  // }
 }

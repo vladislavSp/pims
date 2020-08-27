@@ -57,6 +57,21 @@
   transition-timing-function: linear;
 }
 
+// AROUND
+.around__pag {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background-color: #ffffffb7;
+  margin-right: 1rem;
+  cursor: pointer;
+
+  &--active {
+    background-color: #F4A300;
+    cursor: default;
+  }
+}
 
 @media (max-width: 1400px) and (min-width: 991px) {
   .cards__slide--active {
