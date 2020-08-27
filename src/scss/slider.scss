@@ -66,10 +66,19 @@
   background-color: #ffffffb7;
   margin-right: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 
   &--active {
     background-color: #F4A300;
     cursor: default;
+  }
+
+  &:hover {
+    background-color: #f4a300cc;
+  }
+
+  &--active:hover {
+    background-color: #F4A300;
   }
 }
 

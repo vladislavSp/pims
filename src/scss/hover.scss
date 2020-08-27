@@ -3,7 +3,7 @@
   pointer-events: none;
 }
 
-.desc__item {
+.desc__round[data-state="disable"] .desc__item {
   pointer-events: none;
 }
 
