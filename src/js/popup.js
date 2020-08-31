@@ -10,10 +10,11 @@ let popupState, popupCtx, popup;
 
 function popupHandler(evt) {
   evt.stopPropagation();
+  evt.preventDefault();
 
   popupState = this.getAttribute('data-popup-btn');
   
-  if (popupState === `open`) { // remember popup
+  if (popupState === `open`) { // remember popup from Btn
     popupCtx = this.getAttribute('data-popup-ctx');
     popup = popups.filter(popup => popup.getAttribute('data-popup') === `${popupCtx}`)[0];
   }
