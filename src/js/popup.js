@@ -6,29 +6,34 @@ if (btnsPopup.length) btnsPopup.forEach(btn => {
   btn.addEventListener('click', popupHandler);
 });
 
+let popupState, popupCtx, popup;
+
 function popupHandler(evt) {
   evt.stopPropagation();
-  let popupState = this.getAttribute('data-popup-btn');
-  let popupCtx = this.getAttribute('data-popup-ctx');
-  // let popup = popups.filter(popup => popup.getAttribute('data-popup') === `${popupCtx}`);
 
-  popupStateChange(popupState, this, evt.target);
+  popupState = this.getAttribute('data-popup-btn');
+  
+  if (popupState === `open`) { // remember popup
+    popupCtx = this.getAttribute('data-popup-ctx');
+    popup = popups.filter(popup => popup.getAttribute('data-popup') === `${popupCtx}`);
+  }
+  popupStateChange(popupState, this, evt.target, popup[0]);
 };
 
-function popupStateChange(state, obj, target) {
+function popupStateChange(state, obj, target, popup) {
   const optionForOpen = {
         opacity: 1,
         onStart: () => {
-          popups[0].style.display = 'flex';
-          popups[0].setAttribute('data-state', `enable`);
+          popup.style.display = 'flex';
+          popup.setAttribute('data-state', `enable`);
           document.body.style.overflow = 'hidden';
         },
       },
       optionForClose = {
         opacity: 0,
         onComplete: () => {
-          popups[0].style.display = `none`;
-          popups[0].setAttribute('data-state', `disable`);
+          popup.style.display = `none`;
+          popup.setAttribute('data-state', `disable`);
           document.body.style.overflow = ``;
         },
       };
@@ -36,8 +41,8 @@ function popupStateChange(state, obj, target) {
   let options = state === `open` ? optionForOpen : optionForClose;
 
   if (obj === target) {
-    popups[0].style.opacity = state === `open` ? 0 : ``;
-    gsap.to(popups[0], TIME_DURATION, options);
+    popup.style.opacity = state === `open` ? 0 : ``;
+    gsap.to(popup, TIME_DURATION, options);
   } else return;
 
   state === `open` ? document.addEventListener('keydown', closePopup) : document.removeEventListener('keydown', closePopup);
@@ -45,10 +50,11 @@ function popupStateChange(state, obj, target) {
 
 function closePopup(evt) {
   if (evt.keyCode === 27) {
-    gsap.to(popups[0], TIME_DURATION, {
+    gsap.to(popup[0], TIME_DURATION, {
       opacity: 0,
       onComplete: () => {
-        popups[0].style.display = `none`;
+        popup[0].style.display = `none`;
+        popup.setAttribute('data-state', `disable`);
         document.body.style.overflow = ``;
       },
     });
